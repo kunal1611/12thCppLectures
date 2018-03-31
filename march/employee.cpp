@@ -20,6 +20,39 @@ private:
 public:
   void get_details();
   void show_details();
+//default
+  Employee()
+  {
+    eno = 0 ;
+    name = 'unndefined';
+    salary = 0.0;
+    workTime.arrivalTime = 0;
+    workTime.departureTime = 0;
+  }
+  //parameterised constructor
+  Employee(int num,char *naam,float sal,int arrival,int departure)
+  {
+    eno = num;
+    strcpy(name,naam);
+    salary = sal;
+    workTime.arrival = arrival;
+    workTime.departure = departure;
+  }
+  //copy constructor
+  Employee(Employee &employee)
+  {
+    eno = employee.eno;
+    strcpy(name,employee.name);
+    salary = employee.salary;
+    workTime.arrival = employee.workTime.arrivalTime;
+    workTime.departure = employee.workTime.departureTime;
+  }
+  ~Employee()
+  {
+    int i = 0;
+    cout<<"destructor called" <<i+1;
+  }
+
 };
 
 void Employee::get_details()
