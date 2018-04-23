@@ -46,7 +46,7 @@ void Derived::insert()
 
 void Derived::display()
 {
-  cout << "derived class called !" << endl;
+  cout << "derived classa called !" << endl;
   cout << "a :" << c <<endl;
   cout << "b :" << d <<endl;
 }
